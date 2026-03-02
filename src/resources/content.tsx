@@ -1,49 +1,43 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
+import {
+  Blog,
+  Experience,
+  Gallery,
+  Newsletter,
+  Person,
+  Profile,
+  Projects,
+  Resume,
+  Social,
+} from "@/types";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Fayyez",
+  lastName: "Farrukh",
+  name: `Fayyez Farrukh`,
+  role: "Fullstack Developer",
+  avatar: "/images/avatar.jpg", // TODO: change this to bigger picture
+  email: "fayyez2056@gmail.com",
+  location: "Asia/Karachi",
+  languages: ["English", "Urdu/Hindi"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Fayyez",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/fayyez-farrukh",
     essential: true,
   },
   {
@@ -54,37 +48,17 @@ const social: Social = [
   },
 ];
 
-const home: Home = {
-  path: "/",
-  image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
-  featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+const resumes: Resume[] = [
+  {
+    title: "Fullstack Developer",
+    url: "resumes/Fayyez resume - SE.pdf",
   },
-  subline: (
-    <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
-  ),
-};
+];
 
-const about: About = {
-  path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
+const profile: Profile = {
+  path: "/",
+  label: "Profile",
+  title: `Profile - ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -95,138 +69,341 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/fayyez-farrukh-klufv1",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        High-achieving Software Engineer with experience across AI, machine
+        learning, and full-stack web development. I've contributed to production
+        systems, led award-winning projects, and thrive in collaborative
+        environments where innovation meets real-world impact.
       </>
     ),
   },
+  education: {
+    display: true,
+    title: "Education",
+    institutions: [
+      {
+        name: "FAST NUCES (Lahore)",
+        degree: "B.Sc. in Software Engineering",
+        timeframe: "2022 - 2026",
+        description: (
+          <>
+            Graduated with a GPA of 3.96/4.0 with six gold medals and honour of
+            serving as teacher assistant for three semesters.
+          </>
+        ),
+      },
+      {
+        name: "Forman Christian College (FCCU)",
+        degree: "F.Sc. (pre-engineering)",
+        timeframe: "2020 - 2022",
+        description: (
+          <>Batch bronze medalist. Was awarded two years of merit scholarship</>
+        ),
+      },
+    ],
+  },
+  certifications: {
+    display: true,
+    title: "Certifications",
+    items: [
+      {
+        name: "Django Web Framework",
+        institution: "Meta",
+        year: "2025",
+        url: "https://www.coursera.org/account/accomplishments/verify/PTI1CH9SN3F8",
+      },
+      {
+        name: "Introduction to Databases for Backend Development",
+        institution: "Meta",
+        year: "2025",
+        url: "https://www.coursera.org/account/accomplishments/verify/QSLNG79HOEIM",
+      },
+      {
+        name: "Programming in Python",
+        institution: "Meta",
+        year: "2025",
+        url: "https://www.coursera.org/account/accomplishments/verify/XSFD3WVO40HZ",
+      },
+      {
+        name: "Oracle Cloud Infrastructure 2024 Gen AI Certified Professional",
+        institution: "Oracle",
+        year: "2024",
+        url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=CC1DD9A6950DA7E8B379B60AA0FD678B0C46A79E7BD90BA5538C47F326D2C559",
+      },
+      {
+        name: "Intro to User Design Experience",
+        institution: "Georgia Institute of Technology",
+        year: "2024",
+        url: "https://www.coursera.org/account/accomplishments/records/9MXD4CBFSWZA",
+      },
+      {
+        name: "Python for Data Science, AI & Development",
+        institution: "IBM",
+        year: "2024",
+        url: "https://www.coursera.org/account/accomplishments/records/YUBE4ACZK5AN",
+      },
+      {
+        name: "Intro to Project Management",
+        institution: "Coursera",
+        year: "2023",
+        url: "https://www.coursera.org/account/accomplishments/certificate/Z8QFPHYUSHKC?utm_source=android&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project",
+      },
+    ],
+  },
+  achievements: {
+    display: true,
+    title: "Achievements",
+    items: [
+      {
+        name: "Rector and Dean's List of Honour - FAST NUCES (Lahore)",
+        description: (
+          <>
+            Inscribed in FAST Rector’s list of honour: spring 2023, fall 2023,
+            spring 2024, fall 2024, fall 2025 and Dean’s list of honour: fall
+            2022, spring 2025.
+          </>
+        ),
+        url: "https://www.nu.edu.pk/Campus/Lahore/RectorLists",
+      },
+      {
+        name: "Organizer TEDxFASTLahore 2025",
+        description: (
+          <>
+            Led a team of 80+ students to organise one of the largest TEDx
+            events in Pakistan with 400+ attendees. Coordinated sponsorships,
+            marketing, branding, speaker outreach and logistics efforts for the
+            event.
+          </>
+        ),
+        url: "https://www.ted.com/tedx/events/66246",
+      },
+      {
+        name: "Semester Gold Medals - FAST NUCES Lahore",
+        description: (
+          <>
+            Awarded six gold medals for achieving the highest GPA in six
+            separate semesters in the SE department.
+          </>
+        ),
+      },
+      {
+        name: "SVP Career Counseling Society (CCS)",
+        description: (
+          <>
+            Served as senior vice president of CCS and led teams and coordinated
+            across departments to plan and execute some of the largest events on
+            campus, including annual Job Fair 2024, 2025 and 2026, TEDxFAST 2023
+            and 2024, and Choose France Education Fair 2024 and 2025 and
+            multiple bootcamps and seminars at FAST NUCES.
+          </>
+        ),
+        url: "https://www.instagram.com/careercounselingsociety/?hl=en",
+      },
+      {
+        name: "Student Volunteer - Exploration",
+        description: (
+          <>
+            Team exploration works to promote space education in Pakistan. It is
+            a platform founded by the amazing @Yumna Majid for astronomy
+            enthusiats in Pakistan to collaborate, network and bring amazing
+            workshops/seminars for the public working under the motto of "space
+            for everyone".
+          </>
+        ),
+        url: "https://explorationbyyumna.com/about/",
+      },
+      {
+        name: "Winner Speridian OneAI Hackathon 2025",
+        description: (
+          <>
+            Won the AI hackathon with a prize money 150,000 PKR for submitting
+            the best AI based solution to a warehouse inventory management
+            problem.
+          </>
+        ),
+        url: "https://www.linkedin.com/posts/speridian-technologies_oneai-aihackathon-artificialintelligence-ugcPost-7390987569796280320-gmpF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2A8n8BlQP22N7ofV_z9ZD3yTh7JtJl0lc",
+      },
+      {
+        name: "Trailblazer Award - Soliton Technologies",
+        description: (
+          <>
+            Won first place in an internal innovative product development
+            competition with my submission of Countistics, a Yolov8 based
+            pakistani vehicle tracking and counter for smart parking management.
+          </>
+        ),
+        url: "https://github.com/Fayyez/countistics",
+      },
+    ],
+  },
+};
+
+const experience: Experience = {
+  path: "/experience",
+  label: "Experience",
+  title: `My Experiences`,
+  description: `Work experience and technical skills of ${person.name}`,
+  tableOfContent: {
+    display: true,
+    subItems: false,
+  },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Conrad Labs",
+        timeframe: "June 2025 - September 2025",
+        role: "SWE Intern",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Worked as part of an agile team on an internal ATS / hiring
+            management platform, contributing across the full software
+            development lifecycle. Took part in project demos, bug-bash
+            sessions, and structured code reviews and implemented full-stack
+            features (like easy apply, custom filtration in server side
+            pagination, etc.) collaborating closely with designers, product
+            managers and senior engineers.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Migrated the codebase to a JS-TS hybrid environment, improving type
+            safety, maintainability, and developer experience.
           </>,
         ],
         images: [],
       },
-    ],
-  },
-  studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        company: "Soliton Technologies (now Persivia Inc.)",
+        timeframe: "June 2024 - April 2025",
+        role: "AI Trainee Engineer",
+        achievements: [
+          <>
+            Helped design, implement and validate performance of an LLM-powered
+            text-to-SQL pipeline to automate complex database querying on the
+            company's healthcare analytics platform.
+          </>,
+          <>
+            Contributed to the improvement of machine learning models for
+            patient readmission prediction, focusing on feature engineering,
+            model tuning and performance evaluation to enhance predictive
+            accuracy.
+          </>,
+          <>
+            Developed a CV based vehicle tracking and counting system using
+            YOLOv8 as part of an internal innovation challenge, achieving first
+            place among competing teams. The system was later delivered and
+            deployed on-site at comsats university, Lahore.
+          </>,
+          <>
+            Developed and enhanced an OCR based clinical document processing and
+            medical code assignment pipeline to extract information from
+            structured medical notes, speeding up downstream analytics
+            efficiency and automated workflows.
+          </>,
+        ],
+        images: [],
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        company: "FAST NUCES",
+        timeframe: " February 2024 - January 2025",
+        role: "Teacher Assistant (TA)",
+        achievements: [
+          <>
+            For the courses of Applied Programming (for MSCS), Object Oriented
+            Programming and Data Structures (for BSCS) supporting both graduate
+            and undergraduate coursework.
+          </>,
+        ],
+      },
+      {
+        company: "FAST NUCES",
+        timeframe: "July. 2023 – October. 2023",
+        role: "Reasearch Assistant",
+        achievements: [
+          <>
+            Assisted in the systematic creation, organization and management of
+            dataset for technical summarization via T5 transformer models under
+            the HOD Data Science department at FAST NUCES (Lahore campus).
+          </>,
+        ],
+      },
+      {
+        company: "Questra Digital",
+        timeframe: " June. 2023 – September. 2023",
+        role: "Software Engineer Intern",
+        achievements: [
+          <>
+            Designed and developed reusable UI components using React.js,
+            translating design mock-ups into responsive, production-ready
+            interfaces.
+          </>,
+          <>
+            Contributed to test automation workflows using cypress, assisting in
+            identifying regressions and improving application reliability.
+          </>,
+        ],
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Tools & Technologies",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Programming Languages",
+        description: <></>,
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "python", icon: "python" },
+          { name: "javascript", icon: "javascript" },
+          { name: "typescript", icon: "typescript" },
+          { name: "java", icon: "java" },
+          { name: "C/C++", icon: "cpp" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Frontend",
+        description: <></>,
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "HTML", icon: "HTML" },
+          { name: "Tailwindcss", icon: "tailwindcss" },
+          { name: "React.js", icon: "reactjs" },
+          { name: "Next.js", icon: "nextjs" },
+          { name: "Vite", icon: "vitejs" },
+          { name: "ReactNative", icon: "reactnative" },
+          { name: "Figma", icon: "figma" },
+          { name: "Cypress", icon: "cypress" },
+          { name: "Streamlit", icon: "streamlit" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Backend & Infrastructure",
+        description: <></>,
+        tags: [
+          { name: "Django", icon: "Django" },
+          { name: "Flask", icon: "flask" },
+          { name: "Node.js", icon: "nodejs" },
+          { name: "Express.js", icon: "expressjs" },
+          { name: "SQL", icon: "sql" },
+          { name: "MongoDB", icon: "mongodb" },
+          { name: "Docker", icon: "docker" },
+          { name: "Linux", icon: "linux" },
+          { name: "AWS", icon: "aws" },
+          { name: "Git", icon: "git" },
+          { name: "Numpy", icon: "numpy" },
+          { name: "Langchain", icon: "langchain" },
+          { name: "OpenCV", icon: "opencv" },
+          { name: "Maven", icon: "maven" },
+          { name: "Jira", icon: "jira" },
         ],
+        images: [],
       },
     ],
   },
@@ -237,26 +414,20 @@ const blog: Blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
-const work: Work = {
+const projects: Projects = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
+  label: "Projects",
+  title: `Projects - ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
+  title: `Photo gallery - ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
@@ -301,4 +472,14 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export {
+  person,
+  social,
+  newsletter,
+  resumes,
+  profile,
+  experience,
+  blog,
+  projects,
+  gallery,
+};

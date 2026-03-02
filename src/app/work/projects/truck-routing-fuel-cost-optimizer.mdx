@@ -1,0 +1,28 @@
+---
+title: "Truck Routing: Fuel Cost Optimizer"
+publishedAt: "2024-12-05"
+summary: "A geospatial Django API that calculates the most cost-effective fuel stops for long-haul trucking across the US."
+images:
+  - "/images/projects/truck-routing-1.png"
+link: "https://github.com/Fayyez/Truck-Routing-Service-Django"
+---
+
+## Overview
+
+This service solves the "Cheapest Fuel Route" problem. It calculates the optimal path between any two US locations and identifies fuel stops that minimize the total cost based on real-time prices.
+
+## Key Features
+
+- **Dijkstra-Based Optimization**: Custom pathfinding algorithm designed specifically for fuel price minimization.
+- **Geospatial Queries**: Uses MongoDB's 2dsphere indexing to efficiently find truck stops along a calculated route.
+- **Multi-API Integration**: Supports both OpenRouteService and Google Maps for routing and geocoding.
+
+## Technologies
+
+- **Backend**: Django, Django REST Framework
+- **Database**: MongoDB (Geospatial)
+- **External APIs**: Google Maps, OpenRouteService (ORS)
+
+## Impact
+
+Provides a high-value logistics solution that significantly reduces operational overhead for long-haul transport by automating complex refueling logic.

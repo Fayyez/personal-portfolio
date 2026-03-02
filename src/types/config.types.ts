@@ -177,7 +177,6 @@ export type OnceUIConfig = {
   fonts: FontsConfig;
   style: StyleConfig;
   schema: SchemaConfig;
-  sameAs: SameAsConfig;
   socialSharing: SocialSharingConfig;
   effects: EffectsConfig;
   dataStyle: DataStyleConfig;

@@ -18,6 +18,11 @@ interface TableOfContentsProps {
   };
 }
 
+/**
+ * Reusable table of contents sidebar.
+ * The `about` prop name is kept for backward compatibility but works with any page config
+ * that has a `tableOfContent` field (Profile, Experience, etc.).
+ */
 const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) => {
   const scrollTo = (id: string, offset: number) => {
     const element = document.getElementById(id);

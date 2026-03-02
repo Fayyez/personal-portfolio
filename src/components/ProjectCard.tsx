@@ -1,11 +1,11 @@
 "use client";
 
 import {
-  AvatarGroup,
-  Carousel,
   Column,
   Flex,
   Heading,
+  Media,
+  Row,
   SmartLink,
   Text,
 } from "@once-ui-system/core";
@@ -21,70 +21,89 @@ interface ProjectCardProps {
   link: string;
 }
 
+function isVideo(src: string) {
+  return /\.(mp4|webm|ogg)$/i.test(src);
+}
+
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
   images = [],
   title,
   content,
   description,
-  avatars,
   link,
 }) => {
+  const thumbnail = images.length > 0 ? images[0] : null;
+  const hasVideo = thumbnail ? isVideo(thumbnail) : false;
+
   return (
-    <Column fillWidth gap="m">
-      <Carousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
-          alt: title,
-        }))}
-      />
-      <Flex
-        s={{ direction: "column" }}
-        fillWidth
-        paddingX="s"
-        paddingTop="12"
-        paddingBottom="24"
-        gap="l"
-      >
-        {title && (
-          <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
-            </Heading>
-          </Flex>
+    <Column
+      fillWidth
+      border="neutral-alpha-weak"
+      radius="l"
+      overflow="hidden"
+      background="surface"
+    >
+      {thumbnail && (
+        <Flex
+          fillWidth
+          style={{ maxHeight: "240px", overflow: "hidden" }}
+        >
+          {hasVideo ? (
+            <video
+              src={thumbnail}
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                width: "100%",
+                height: "240px",
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
+          ) : (
+            <Media
+              sizes="(max-width: 768px) 100vw, 640px"
+              alt={title}
+              src={thumbnail}
+              aspectRatio="16/9"
+              radius="none"
+            />
+          )}
+        </Flex>
+      )}
+      <Column fillWidth padding="m" gap="12">
+        <Heading as="h3" variant="heading-strong-l">
+          {title}
+        </Heading>
+        {description?.trim() && (
+          <Text variant="body-default-m" onBackground="neutral-weak">
+            {description}
+          </Text>
         )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
-          <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
-            {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
-                {description}
-              </Text>
-            )}
-            <Flex gap="24" wrap>
-              {content?.trim() && (
-                <SmartLink
-                  suffixIcon="arrowRight"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={href}
-                >
-                  <Text variant="body-default-s">Read case study</Text>
-                </SmartLink>
-              )}
-              {link && (
-                <SmartLink
-                  suffixIcon="arrowUpRightFromSquare"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={link}
-                >
-                  <Text variant="body-default-s">View project</Text>
-                </SmartLink>
-              )}
-            </Flex>
-          </Column>
-        )}
-      </Flex>
+        <Row gap="20" paddingTop="4">
+          {content?.trim() && (
+            <SmartLink
+              suffixIcon="arrowRight"
+              style={{ margin: "0", width: "fit-content" }}
+              href={href}
+            >
+              <Text variant="body-default-s">Read more</Text>
+            </SmartLink>
+          )}
+          {link && (
+            <SmartLink
+              suffixIcon="arrowUpRightFromSquare"
+              style={{ margin: "0", width: "fit-content" }}
+              href={link}
+            >
+              <Text variant="body-default-s">View project</Text>
+            </SmartLink>
+          )}
+        </Row>
+      </Column>
     </Column>
   );
 };

@@ -14,15 +14,14 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import { baseURL, effects, fonts, style, dataStyle, profile } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: home.title,
-    description: home.description,
+    title: profile.title,
+    description: profile.description,
     baseURL: baseURL,
-    path: home.path,
-    image: home.image,
+    path: profile.path,
   });
 }
 

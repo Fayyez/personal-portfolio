@@ -1,0 +1,26 @@
+---
+title: "Silsila: Quantum-Safe File Sharing"
+publishedAt: "2025-01-20"
+summary: "A high-security file transfer system utilizing Post-Quantum Cryptography (PQC) and parallelized data streams."
+link: "https://github.com/Fayyez/Silsila"
+images:
+- "/demos/silsila-demo.mp4"
+---
+
+## Overview
+Silsila is a secure file-sharing platform designed to remain resilient against future quantum computing threats. It implements advanced Post-Quantum Cryptography (PQC) algorithms to ensure long-term data privacy while maintaining high-performance transfer speeds through parallelization.
+
+## Key Features
+- **Quantum-Safe Encryption**: Integrates the `liboqs` library to implement NIST-standard post-quantum algorithms for key encapsulation and digital signatures.
+- **Parallelized Uploads**: Optimizes data throughput by splitting files into chunks and uploading them over multiple concurrent connections.
+- **Secure Architecture**: Built with a Flask-based backend to manage encrypted handshakes and secure file routing.
+- **High-Performance Streaming**: Designed to handle large data volumes without the bottleneck typically associated with heavy encryption overhead.
+
+## Technologies
+- **Cryptography**: PyOQS (liboqs wrapper)
+- **Backend**: Python, Flask
+- **Networking**: Multi-threading, Socket Parallelization
+- **Tools**: Git, GitHub
+
+## Impact
+Developed a future-proof security solution that addresses the "harvest now, decrypt later" threat. The project successfully demonstrates that post-quantum security can be integrated into consumer-grade file-sharing applications without sacrificing significant performance.

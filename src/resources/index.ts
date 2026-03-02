@@ -1,12 +1,12 @@
-// import a pre-defined template for config and content options
 export {
   person,
   social,
   newsletter,
-  home,
-  about,
+  resumes,
+  profile,
+  experience,
   blog,
-  work,
+  projects,
   gallery,
 } from "./content";
 
@@ -19,7 +19,6 @@ export {
   fonts,
   style,
   schema,
-  sameAs,
   socialSharing,
   effects,
   dataStyle,

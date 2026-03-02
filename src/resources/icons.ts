@@ -20,6 +20,7 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
+  PiBriefcaseDuotone,
 } from "react-icons/pi";
 
 import {
@@ -27,9 +28,49 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiVite,
+  SiCypress,
+  SiStreamlabs,
+  SiStreamlit,
+  SiDjango,
+  SiFlask,
+  SiNodedotjs,
+  SiExpress,
+  SiMonero,
+  SiMongodb,
+  SiDocker,
+  SiLinux,
+  SiGit,
+  SiNumpy,
+  SiLangchain,
+  SiOpencv,
+  SiApachemaven,
+  SiJira,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import {
+  FaDiscord,
+  FaGithub,
+  FaLinkedin,
+  FaX,
+  FaThreads,
+  FaInstagram,
+  FaXTwitter,
+  FaFacebook,
+  FaPinterest,
+  FaWhatsapp,
+  FaReddit,
+  FaTelegram,
+  FaPython,
+  FaJava,
+  FaHtml5,
+  FaAws,
+} from "react-icons/fa6";
+import { TbBrandCpp, TbBrandReactNative, TbFileTypeSql } from "react-icons/tb";
+import { RiReactjsFill } from "react-icons/ri";
+import { FaLaptop } from "react-icons/fa";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -37,12 +78,13 @@ export const iconLibrary: Record<string, IconType> = {
   email: HiEnvelope,
   globe: HiOutlineGlobeAsiaAustralia,
   person: PiUserCircleDuotone,
-  grid: PiGridFourDuotone,
+  grid: FaLaptop,
   book: PiBookBookmarkDuotone,
   openLink: HiOutlineLink,
   calendar: HiCalendarDays,
   home: PiHouseDuotone,
   gallery: PiImageDuotone,
+  briefcase: PiBriefcaseDuotone,
   discord: FaDiscord,
   eye: HiOutlineEye,
   eyeOff: HiOutlineEyeSlash,
@@ -64,6 +106,32 @@ export const iconLibrary: Record<string, IconType> = {
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+  python: FaPython,
+  typescript: SiTypescript,
+  java: FaJava,
+  cpp: TbBrandCpp,
+  HTML: FaHtml5,
+  tailwindcss: SiTailwindcss,
+  reactjs: RiReactjsFill,
+  vitejs: SiVite,
+  reactnative: TbBrandReactNative,
+  cypress: SiCypress,
+  streamlit: SiStreamlit,
+  Django: SiDjango,
+  flask: SiFlask,
+  nodejs: SiNodedotjs,
+  expressjs: SiExpress,
+  mongodb: SiMongodb,
+  docker: SiDocker,
+  linux: SiLinux,
+  git: SiGit,
+  numpy: SiNumpy,
+  langchain: SiLangchain,
+  opencv: SiOpencv,
+  maven: SiApachemaven,
+  jira: SiJira,
+  sql: TbFileTypeSql,
+  aws: FaAws
 };
 
 export type IconLibrary = typeof iconLibrary;

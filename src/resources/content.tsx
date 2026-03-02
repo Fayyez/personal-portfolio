@@ -247,7 +247,7 @@ const profile: Profile = {
 const experience: Experience = {
   path: "/experience",
   label: "Experience",
-  title: `My Experiences`,
+  title: `Experience - ${person.name}`,
   description: `Work experience and technical skills of ${person.name}`,
   tableOfContent: {
     display: true,
@@ -417,7 +417,7 @@ const blog: Blog = {
 };
 
 const projects: Projects = {
-  path: "/work",
+  path: "/projects",
   label: "Projects",
   title: `Projects - ${person.name}`,
   description: `Design and dev projects by ${person.name}`,

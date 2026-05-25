@@ -72,9 +72,9 @@ export const Header = () => {
           position: "fixed",
         }}
       >
-        {/* <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Row s={{ hide: true }}>{person.location}</Row>}
-        </Row> */}
+        <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
+          {display.location && <Row s={{ hide: true }}/>}
+        </Row>
         <Row fillWidth horizontal="center">
           <Row
             background="page"

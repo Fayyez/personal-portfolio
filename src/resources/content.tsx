@@ -17,7 +17,6 @@ const person: Person = {
   role: "Fullstack Developer",
   avatar: "/images/avatar.jpg", // TODO: change this to bigger picture
   email: "fayyez2056@gmail.com",
-  location: "Asia/Karachi",
   languages: ["English", "Urdu/Hindi"],
 };
 
@@ -196,11 +195,12 @@ const profile: Profile = {
         name: "SVP Career Counseling Society (CCS)",
         description: (
           <>
-            Served as senior vice president of CCS and led teams and coordinated
-            across departments to plan and execute some of the largest events on
-            campus, including annual Job Fair 2024, 2025 and 2026, TEDxFAST 2023
-            and 2024, and Choose France Education Fair 2024 and 2025 and
-            multiple bootcamps and seminars at FAST NUCES.
+            Served as senior vice president of CCS, led teams of 100+ students
+            and coordinated across departments to plan and execute some of the
+            largest events on campus, including annual Job Fair 2024, 2025 and
+            2026, TEDxFAST 2023 and 2024, and Choose France Education Fair 2024
+            and 2025 as well as multiple bootcamps, seminars, etc., at FAST
+            NUCES.
           </>
         ),
         url: "https://www.instagram.com/careercounselingsociety/?hl=en",
@@ -219,12 +219,34 @@ const profile: Profile = {
         url: "https://explorationbyyumna.com/about/",
       },
       {
-        name: "Winner Speridian OneAI Hackathon 2025",
+        name: "Winner National AI Hackathon 2026 - Atomcamp/PSDF",
         description: (
           <>
-            Won the AI hackathon with a prize money 150,000 PKR for submitting
-            the best AI based solution to a warehouse inventory management
-            problem.
+            Won first place at the National Agentic AI Hackathon 2026 jointly
+            organized by atomcamp and Punjab Skills Development Fund (PSDF) for
+            developing a multi-agentic RAG enabled multi-disciplinary simulation
+            and clinical decision support system.
+          </>
+        ),
+        url: "https://credsverse.com/credentials/f5c9c35e-411d-4abc-a8a8-48b78e756212",
+      },
+      {
+        name: "Winner Software Project Competition (SPC) - SOFTEC 2026",
+        description: (
+          <>
+            Won first place in the biggest competition (SPC) at SOFTEC 2026
+            which is one of the largest tech extravaganzas in Pakistan.
+          </>
+        ),
+        url: "https://www.linkedin.com/posts/fayyez-farrukh_softec2026-fastnuces-fyp-activity-7451734468853125120-FdmP/",
+      },
+      {
+        name: "Winner OneAI Hackathon 2025 - Speridian Technologies",
+        description: (
+          <>
+            Won first place in the 12 hour AI hackathon with a prize money
+            150,000 PKR for submitting the best AI based solution to a warehouse
+            inventory management problem, organized by Speridian Technologies.
           </>
         ),
         url: "https://www.linkedin.com/posts/speridian-technologies_oneai-aihackathon-artificialintelligence-ugcPost-7390987569796280320-gmpF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2A8n8BlQP22N7ofV_z9ZD3yTh7JtJl0lc",

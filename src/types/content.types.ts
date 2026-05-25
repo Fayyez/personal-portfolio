@@ -14,7 +14,6 @@ export type Person = {
   role: string;
   avatar: string;
   email: string;
-  location: IANATimeZone;
   languages?: string[];
 };
 

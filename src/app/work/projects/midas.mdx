@@ -1,0 +1,36 @@
+---
+title: "MIDAS: Multi-Input Diagnostic Aid System"
+publishedAt: "2024-05-01"
+summary: "A multi-modal diagnostic engine combined with a traditional CDSS for clinical desicion support and reducing diagnostic errors."
+images:
+  - "/demos/midas-demo.mp4"
+link: "https://github.com/eehab-saadat/MIDAS"
+---
+
+## Overview
+
+MIDAS is a smart clinical asset management system combined with a multi-modal data-driven diagnostic engine designed to reduce the cognitive overload that leads to misdiagnoses. Based on real clinical data from Fatima Memorial Hospital. This was as the final year project for my undergrad degree and got awarded first place in Software Project Competition at SOFTEC 2026.
+
+## Key Features
+
+- **Multi-Modal Repository**: A comprehensive system for managing various clinical assets.
+- **Auto Scribe**: Automatically transcribes and structures clinical notes.
+- **OCR for Lab Reports**: Reads and extracts data from structured medical reports using OCR.
+- **Dynamic Context Engineering**: Utilizes Dynamic K-Shots via RAG (Retrieval-Augmented Generation).
+- **Diagnostic Aid**: Generates probable diagnoses backed by explainable reasoning.
+- **Anomaly Detection**: Identifies anomalies within medical imagery.
+- **Continuous Improvement**: Employs a feedback state machine and continuous ground truth generation for critique-based refinement.
+- **Automated Reporting**: Capable of generating shareable PDF reports.
+
+## Technologies
+
+- **Backend**: Django (core), FastAPI (microservices)
+- **AI & Diagnostic Engine**: Google Medgemma 4B (diagnostic engine), Chroma DB (RAG)
+- **Frontend**: Next JS
+- **Database**: Postgres
+
+## Impact
+
+- **Model Accuracy**: Achieved an average precision of 0.8607, a recall of 0.9315, and an F1-Score of 0.8832.
+- **Semantic Performance**: Reached an average semantic similarity score of 0.9603 using ClinicalBERT.
+- **Recognition**: Secured 1st place in SOFTEC SPC 2026

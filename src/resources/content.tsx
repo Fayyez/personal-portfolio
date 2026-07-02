@@ -92,7 +92,7 @@ const profile: Profile = {
         timeframe: "2022 - 2026",
         description: (
           <>
-            Graduated with a GPA of 3.96/4.0 with six gold medals and honour of
+            Graduated as valedictorian with a CGPA of 3.96/4.0 with seven semester gold medals and honour of
             serving as teacher assistant for three semesters.
           </>
         ),
@@ -164,7 +164,7 @@ const profile: Profile = {
         description: (
           <>
             Inscribed in FAST Rector’s list of honour: spring 2023, fall 2023,
-            spring 2024, fall 2024, fall 2025 and Dean’s list of honour: fall
+            spring 2024, fall 2024, fall 2025, spring 2026 and Dean’s list of honour: fall
             2022, spring 2025.
           </>
         ),
@@ -175,7 +175,7 @@ const profile: Profile = {
         description: (
           <>
             Led a team of 80+ students to organise one of the largest TEDx
-            events in Pakistan with 400+ attendees. Coordinated sponsorships,
+            events in Pakistan with 500+ attendees. Coordinated sponsorships,
             marketing, branding, speaker outreach and logistics efforts for the
             event.
           </>
@@ -186,8 +186,7 @@ const profile: Profile = {
         name: "Semester Gold Medals - FAST NUCES Lahore",
         description: (
           <>
-            Awarded six gold medals for achieving the highest GPA in six
-            separate semesters in the SE department.
+            Awarded seven gold medals for achieving the highest GPA in different semesters in the SE department.
           </>
         ),
       },
@@ -282,7 +281,7 @@ const experience: Experience = {
       {
         company: "Conrad Labs",
         timeframe: "June 2025 - September 2025",
-        role: "SWE Intern",
+        role: "SWE Fullstack",
         achievements: [
           <>
             Worked as part of an agile team on an internal ATS / hiring
@@ -303,7 +302,7 @@ const experience: Experience = {
       {
         company: "Soliton Technologies (now Persivia Inc.)",
         timeframe: "June 2024 - April 2025",
-        role: "AI Trainee Engineer",
+        role: "AI Engineer",
         achievements: [
           <>
             Helped design, implement and validate performance of an LLM-powered

@@ -58,7 +58,7 @@ const profile: Profile = {
   path: "/",
   label: "Profile",
   title: `Profile - ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from Lahore`,
   tableOfContent: {
     display: true,
     subItems: false,

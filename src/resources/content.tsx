@@ -279,9 +279,37 @@ const experience: Experience = {
     title: "Work Experience",
     experiences: [
       {
+        company: "Strategic Systems International (SSI)",
+        timeframe: "June 2026 - Present",
+        role: "Software Engineer",
+        achievements: [
+          <>
+            Worked on agent-based market prediction and trading data consolidation platform, E2E OCR-VLM solutions, loop endgineering and other enterprise level AIf-first features as part of the company's Center of Excellence for AI/ML.
+          </>,
+          <>
+            Implemented context compression techniques to reduce internal token usage costs by 20%.
+          </>,
+        ],
+        images: [],
+      },
+       {
+        company: "Brio",
+        timeframe: "September 2025 - December 2025",
+        role: "AI & Software Engineer (Contractual)",
+        achievements: [
+          <>
+            Contributed to open source agentic AI benchmarks like OSWorld and Terminal Bench, evaluating agent performance across computing, tool calling and terminal tasks.
+          </>,
+          <>
+            Developed and implemented observability and evaluation systems for agentic tool-calling workflows, enabling analysis of tool usage, execution behavior and task outcomes.
+          </>,
+        ],
+        images: [],
+      },
+      {
         company: "Conrad Labs",
         timeframe: "June 2025 - September 2025",
-        role: "SWE Fullstack",
+        role: "Fullstack SWE Intern",
         achievements: [
           <>
             Worked as part of an agile team on an internal ATS / hiring
